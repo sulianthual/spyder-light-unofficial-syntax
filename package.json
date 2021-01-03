@@ -1,0 +1,15 @@
+{
+  "name": "spyder-light-unofficial-syntax",
+  "theme": "syntax",
+  "version": "0.0.0",
+  "description": "Attempt at the Spyder Light Syntax Theme",
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
+  "repository": "https://github.com/atom/spyder-light-unofficial-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
