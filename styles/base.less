@@ -60,13 +60,15 @@ atom-text-editor {
 
 
 //cant have at same time as bracket-matcher
-    .line-number.cursor-line-no-selection,
+/*    .line-number.cursor-line-no-selection,
     .line.cursor-line {
       background-color: @spyder-light-purple;
-    }
+    }*/
     
 
-
+.line, .line-number, .cursor {
+  line-height: 1.1;//line spacing
+}
     
 }
 
@@ -86,6 +88,9 @@ atom-text-editor {
 
   &.syntax--operator {
     color: @syntax-text-color;
+    &.syntax--logical{
+    color: @spyder-blue;
+    }
   }
 
   &.syntax--other.syntax--special-method {
@@ -104,7 +109,10 @@ atom-text-editor {
 
 .syntax--constant {
   //color: @spyder-purple;
-
+  &.syntax--language {
+    color: @spyder-purple;
+  }
+  
   &.syntax--character.syntax--escape {
     //color: @spyder-red;
   }
@@ -134,15 +142,19 @@ atom-text-editor {
     color: @spyder-red;
   }
   &.syntax--parameter.syntax--function {
-    //color: @spyder-red;
+    color: @spyder-black;
+    //color: @spyder-brown;
     //font-style: italic;
     font-weight: normal;
+    &.syntax--python.syntax--self{
+    color: @spyder-red;
+    }
     }
 }
 
 .syntax--invalid.syntax--illegal {
-  background-color: @spyder-red;
-  color: @syntax-background-color;
+  background-color: @spyder-light-purple;
+  //color: @spyder-red;
 }
 
 .syntax--string {
@@ -256,11 +268,13 @@ atom-text-editor {
     font-weight: normal;
 }
  &.syntax--function {
-    //color: @spyder-black;
-    //font-weight: bold;
-    &.syntax--function{
     color: @spyder-black;
     font-weight: bold;
+    &.syntax--parameters{
+    font-weight: normal;
+    }
+    &.syntax--self{
+    color: @spyder-brown;
     }
 }
  &.syntax--class {
